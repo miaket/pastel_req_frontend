@@ -1,6 +1,6 @@
-# pastel_req_frontend
+# vue-cli
 
-> vue based pastelaria
+> A Vue.js project
 
 ## Build Setup
 
