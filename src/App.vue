@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <apiheader></apiheader>
+    <app-header></app-header>
     <form>
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
@@ -121,8 +121,15 @@
 </template>
 
 <script>
-  import apiheader from "./component/shared/Header.vue";
+  import Header from './components/Shared/Header.vue';
+  //import apiheader from "./component/shared/Header.vue";
   export default {
+    components: {
+      appHeader: Header
+      //Servers,
+      //'app-server-details': ServerDetails,
+      //'app-footer': Footer
+    }
   }
 </script>
 
