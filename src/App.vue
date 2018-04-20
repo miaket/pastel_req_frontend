@@ -124,6 +124,11 @@
   import Header from './components/Shared/Header.vue';
   //import apiheader from "./component/shared/Header.vue";
   export default {
+    data (){
+      return{
+        bende: 'bende'
+      }
+    },
     components: {
       appHeader: Header
       //Servers,
@@ -131,7 +136,38 @@
       //'app-footer': Footer
     }
   }
+// <script>
+//     import Switch from './Switch.vue';
+//     export default {
+//         data () {
+//             return {
+//                 userData: {
+//                     email: '',
+//                     password: '',
+//                     age: 27
+//                 },
+//                 message: 'A new Text',
+//                 sendMail: [],
+//                 gender: 'Male',
+//                 selectedPriority: 'High',
+//                 priorities: ['High', 'Medium', 'Low'],
+//                 dataSwitch: true,
+//                 isSubmitted: false
+//             }
+//         },
+//         methods: {
+//           submitted() {
+//               this.isSubmitted = true;
+//           }
+//         },
+//         components: {
+//             appSwitch: Switch
+//         }
+//     }
+// </script>
+
 </script>
+
 
 <style>
 

@@ -1,13 +1,14 @@
 <template>
   <div class="container">
     <div class="col-xs-12">
-      <h2>Cielo - Informações estratégicas</h2>
-      <h1>Demandas</h1>
+      <h1>Cielo - Informações estratégicas</h1>
+      <h2>Demandas</h2>
     </div>
-    
+  </div>
 </template>
 
 <script>
+
 </script>
 
 <style scoped>
