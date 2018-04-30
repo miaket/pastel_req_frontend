@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <app-header></app-header>
-    <app-reqform></app-reqform>
+    <app-formbox></app-formbox>
     <hr>
     <div class="row">
       <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
@@ -30,7 +30,7 @@
 
 <script>
   import Header from './components/Shared/Header.vue';
-  import Reqform from './components/Shared/Reqform.vue';
+  import Formbox from './components/Shared/Formbox.vue';
   //import apiheader from "./component/shared/Header.vue";
   export default {
     data (){
@@ -40,7 +40,7 @@
     },
     components: {
       appHeader: Header,
-      appReqform: Reqform,
+      appFormbox: Formbox,
       //Servers,
       //'app-server-details': ServerDetails,
       //'app-footer': Footer
