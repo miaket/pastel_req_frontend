@@ -42,7 +42,6 @@
     methods: {
       submitted() {
         console.log('inside vue submitted')
-        //alert('oi');
         let userreq = new FormData();
         userreq.append('userName','testing from vue');
         this.$http.post('user/1/reqcreate', userreq).then(function (response){
