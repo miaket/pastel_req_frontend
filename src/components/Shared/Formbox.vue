@@ -11,10 +11,11 @@
       <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
         <label for="message">Describe Request</label><br>
         <!-- Interpolation between <textarea>{{ test }}</textarea> doesn't work!-->
-        <textarea
+        <textarea v-model="userrequest.content"
           id="reqmsg"
           rows="5"
           class="form-control"></textarea>
+          <p>{{userrequest.content}}</p>
       </div>
     </div>
     <div class="row">
@@ -33,7 +34,9 @@
   export default {
     data (){
       return{
-        bende: 'bende'
+        userrequest: {
+          content: ''
+        }
       }
     },
     components: {
@@ -41,12 +44,12 @@
     },
     methods: {
       submitted() {
-        console.log('inside vue submitted')
-        let userreq = new FormData();
-        userreq.append('userName','testing from vue');
-        this.$http.post('user/1/reqcreate', userreq).then(function (response){
-          console.log('Success: ', response.date);
-        }, function(response){
+        var userreq = new FormData();
+        userreq.append('content','testing from vue');
+        this.$http.post('user/2/reqcreate', this.userrequest)
+          .then(response => {
+            console.log('Success: ', response.date);
+          }, function(response){
           console.log('Error: ', response.data);
         });
       }
