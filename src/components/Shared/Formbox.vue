@@ -1,11 +1,9 @@
 <template>
   <form>
     <div class="row">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-        <h1>File a Complaint</h1>
-        <hr>
-        <app-anlform></app-anlform>
-      </div>
+
+      <app-anlform></app-anlform>
+
     </div>
     <div class="row">
       <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
@@ -34,6 +32,9 @@
   export default {
     data (){
       return{
+        userid:{
+          id:''
+        },
         userrequest: {
           content: ''
         }
@@ -46,7 +47,7 @@
       submitted() {
         var userreq = new FormData();
         userreq.append('content','testing from vue');
-        this.$http.post('user/2/reqcreate', this.userrequest)
+        this.$http.post('user/' + userid + '/reqcreate', this.userrequest)
           .then(response => {
             console.log('Success: ', response.date);
           }, function(response){
