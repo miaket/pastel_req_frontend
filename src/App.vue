@@ -29,6 +29,7 @@
 </template>
 
 <script>
+  import {mapState,mapGetters,mapMutations} from 'vuex';
   import Header from './components/Shared/Header.vue';
   import Formbox from './components/Shared/Formbox.vue';
   //import apiheader from "./component/shared/Header.vue";
@@ -41,41 +42,8 @@
     components: {
       appHeader: Header,
       appFormbox: Formbox,
-      //Servers,
-      //'app-server-details': ServerDetails,
-      //'app-footer': Footer
-    }
+    },
   }
-// <script>
-//     import Switch from './Switch.vue';
-//     export default {
-//         data () {
-//             return {
-//                 userData: {
-//                     email: '',
-//                     password: '',
-//                     age: 27
-//                 },
-//                 message: 'A new Text',
-//                 sendMail: [],
-//                 gender: 'Male',
-//                 selectedPriority: 'High',
-//                 priorities: ['High', 'Medium', 'Low'],
-//                 dataSwitch: true,
-//                 isSubmitted: false
-//             }
-//         },
-//         methods: {
-//           submitted() {
-//               this.isSubmitted = true;
-//           }
-//         },
-//         components: {
-//             appSwitch: Switch
-//         }
-//     }
-// </script>
-
 </script>
 
 

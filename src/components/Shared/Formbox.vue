@@ -5,10 +5,14 @@
       <app-anlform></app-anlform>
 
     </div>
+    <hr>
     <div class="row">
       <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
+        <label for="message">User Id</label><br>
+        <textarea v-model="userid.id" name="userid" id="" class="form-control" rows="1"></textarea>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
         <label for="message">Describe Request</label><br>
-        <!-- Interpolation between <textarea>{{ test }}</textarea> doesn't work!-->
         <textarea v-model="userrequest.content"
           id="reqmsg"
           rows="5"
@@ -21,6 +25,7 @@
         <button @click.prevent='submitted'
           class="btn btn-primary">Submit!
         </button>
+        <button @click.prevent="changeUserId" class="btn"></button>
       </div>
     </div>
   </form>
@@ -45,15 +50,22 @@
     },
     methods: {
       submitted() {
-        var userreq = new FormData();
-        userreq.append('content','testing from vue');
-        this.$http.post('user/' + userid + '/reqcreate', this.userrequest)
+        console.log ('under user: ' + this.$store.state.userId);
+
+        this.$http.post('user/' + this.$store.state.userId + '/reqcreate', this.userrequest)
           .then(response => {
             console.log('Success: ', response.date);
           }, function(response){
           console.log('Error: ', response.data);
         });
-      }
+      },
+      changeUserId () {
+        // this.$store.commit('increment')
+        console.log(this.$store.state.userId)
+        this.$store.commit('changeUserId',{
+          userId: this.userid.id
+        })
+      },
     }
   }
 // <script>
