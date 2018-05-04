@@ -1,9 +1,7 @@
 <template>
   <form>
     <div class="row">
-
       <app-anlform></app-anlform>
-
     </div>
     <hr>
     <div class="row">
@@ -32,7 +30,6 @@
 </template>
 
 <script>
-
   import Anlform from '../form/Anlform.vue';
   export default {
     data (){
@@ -51,7 +48,6 @@
     methods: {
       submitted() {
         console.log ('under user: ' + this.$store.state.userId);
-
         this.$http.post('user/' + this.$store.state.userId + '/reqcreate', this.userrequest)
           .then(response => {
             console.log('Success: ', response.date);
@@ -60,7 +56,6 @@
         });
       },
       changeUserId () {
-        // this.$store.commit('increment')
         console.log(this.$store.state.userId)
         this.$store.commit('changeUserId',{
           userId: this.userid.id
@@ -68,36 +63,6 @@
       },
     }
   }
-// <script>
-//     import Switch from './Switch.vue';
-//     export default {
-//         data () {
-//             return {
-//                 userData: {
-//                     email: '',
-//                     password: '',
-//                     age: 27
-//                 },
-//                 message: 'A new Text',
-//                 sendMail: [],
-//                 gender: 'Male',
-//                 selectedPriority: 'High',
-//                 priorities: ['High', 'Medium', 'Low'],
-//                 dataSwitch: true,
-//                 isSubmitted: false
-//             }
-//         },
-//         methods: {
-//           submitted() {
-//               this.isSubmitted = true;
-//           }
-//         },
-//         components: {
-//             appSwitch: Switch
-//         }
-//     }
-// </script>
-
 </script>
 
 <style scoped>
