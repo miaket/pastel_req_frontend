@@ -29,10 +29,8 @@
 </template>
 
 <script>
-  import {mapState,mapGetters,mapMutations} from 'vuex';
   import Header from './components/Shared/Header.vue';
   import Formbox from './components/Shared/Formbox.vue';
-  //import apiheader from "./component/shared/Header.vue";
   export default {
     data (){
       return{
