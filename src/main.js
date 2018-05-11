@@ -7,7 +7,7 @@ import { store } from './store/store';
 Vue.use(VueResource);
 Vue.use(Vuex);
 Vue.http.options.root = 'http://127.0.0.1:3100/api/';
-Vue.prototype.$userId = '1';
+//Vue.prototype.$userId = '1';
 
 new Vue({
   el: '#app',
