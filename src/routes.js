@@ -8,8 +8,9 @@ import Signin from './components/auth/Signin.vue';
 export const routes = [
     {path: '/signin', name: 'signin', components:{
       default: Signin,
+      'header-top': Header
     }},
-    { path: '', name: 'home', components: {
+    { path: '/home', name: 'home', components: {
         default: Home,
         'header-top': Header
     } },
@@ -18,5 +19,5 @@ export const routes = [
         'header-top': Header
     } },
     { path: '/redirect-me', redirect: { name: 'home' } },
-    { path: '*', redirect: '/' }
+    { path: '*', redirect: '/signin' }
 ];
