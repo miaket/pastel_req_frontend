@@ -50,8 +50,8 @@
     },
     methods: {
       submitted() {
-        console.log ('under user: ' + this.$store.state.userId);
-        this.$http.post('user/' + this.$store.state.userId + '/reqcreate', this.userrequest)
+        console.log ('under user: ' + this.$store.state.userid);
+        this.$http.post('user/' + this.$store.state.userid + '/reqcreate', this.userrequest)
           .then(response => {
             console.log('Success: ', response.date);
           }, function(response){
@@ -60,9 +60,9 @@
       },
       changeUserId () {
         this.$store.commit('changeUserId',{
-          userId: this.userid.id
+          userid: this.userid.id
         })
-        console.log(this.$store.state.userId)
+        console.log(this.$store.state.userid)
       },
     }
   }

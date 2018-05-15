@@ -27,8 +27,11 @@
               if (response.username)
               console.log(response)
               console.log('Success: ', response.date);
-              this.$store.commit('changeUserId',{
-                userId: response.id
+              this.$store.commit('changeuserid',{
+                userid: response.id
+              })
+              this.$store.commit('changeUserName',{
+                username: response.username
               })
               console.log(response)
               this.$router.replace({ name: "home" });

@@ -5,12 +5,12 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state: {
-    userId: 0,
+    userid: 0,
     userName: '',
   },
   mutations: {
     changeUserId(state, payload){
-      state.userId = payload.userId
+      state.userid = payload.userid
     },
     changeUserName(state, payload){
       state.userName = payload.userName
