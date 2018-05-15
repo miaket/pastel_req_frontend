@@ -40,10 +40,10 @@
               if (response.username)
               console.log(response)
               console.log('Success: ', response.date);
-              this.$store.commit('changeuserid',{
+              this.$store.commit('changeUserid',{
                 userid: response.id
               })
-              this.$store.commit('changeUserName',{
+              this.$store.commit('changeUsername',{
                 username: response.username
               })
               console.log(response)
