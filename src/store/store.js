@@ -6,14 +6,14 @@ Vue.use(Vuex);
 export const store = new Vuex.Store({
   state: {
     userid: 0,
-    userName: '',
+    username: '',
   },
   mutations: {
-    changeUserId(state, payload){
+    changeUserid(state, payload){
       state.userid = payload.userid
     },
-    changeUserName(state, payload){
-      state.userName = payload.userName
+    changeUsername(state, payload){
+      state.username = payload.username
     }
   }
 });
