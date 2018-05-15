@@ -10,7 +10,6 @@ Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.use(Vuex);
 Vue.http.options.root = 'http://127.0.0.1:3100/api/';
-//Vue.prototype.$userId = '1';
 
 const router = new VueRouter({
   routes,

@@ -9,10 +9,7 @@
         <router-link to="/form" tag="li" active-class="active"><a>User</a></router-link>
       </ul>
       <hr>
-      
     </div>
-    <!-- <textarea v-model="flexUser.userName" name="" id="" cols="30" rows="10"></textarea> -->
-    <!-- <button @click.prevent="changeUserName" class="btn">change User</button> -->
   </div>
 </template>
 
@@ -28,14 +25,6 @@
         }
       }
     },
-    // methods: {
-    //   changeUserName () {
-    //     console.log(this.$store.state.userName)
-    //     this.$store.commit('changeUserName',{
-    //       userName: this.flexUser.userName
-    //     })
-    //   },
-    // },
   }
 </script>
 
