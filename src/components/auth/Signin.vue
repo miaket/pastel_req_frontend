@@ -1,11 +1,24 @@
 <template>
   <div id="login">
-    <h1>Login</h1>
-    <input type="text" name="username" v-model="input.username" placeholder="Username" />
-    <input type="password" name="password" v-model="input.password" placeholder="Password" />
-    <button type="button" v-on:click="signin()">Signin</button>
+    <form class="form-signin">
+      <!-- <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="inputUsername" class="sr-only">Email address</label>
+      <input type="text" name="username" class="form-control" v-model="input.username" placeholder="Username" />
+      <input type="password" name="password" class="form-control" v-model="input.password" placeholder="Password" />
+      <label for="inputPassword" class="sr-only">Password</label>
+      
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="button" v-on:click="signin()">Signin</button>
+      <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+    </form>
   </div>
 </template>
+
 
 <script>
   export default {
@@ -48,11 +61,12 @@
 
 <style scoped>
   #login {
-    width: 500px;
+    width: 400px;
     border: 1px solid #CCCCCC;
     background-color: #FFFFFF;
     margin: auto;
-    margin-top: 200px;
     padding: 20px;
+    font-size: 20;
+    
   }
 </style>
