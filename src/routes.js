@@ -5,6 +5,8 @@ import Form from './components/Shared/Formbox.vue';
 import Home from './components/Home.vue';
 import Header from './components/Shared/Header.vue';
 import Signin from './components/auth/Signin.vue';
+import Navmenu from './components/Shared/Navmenu.vue';
+
 export const routes = [
     {path: '/signin', name: 'signin', components:{
       default: Signin,
@@ -12,11 +14,13 @@ export const routes = [
     }},
     { path: '/home', name: 'home', components: {
         default: Home,
-        'header-top': Header
+        'header-top': Header,
+        'menu-top': Navmenu
     } },
     { path: '/form', components: {
         default: Form,
-        'header-top': Header
+        'header-top': Header,
+        'menu-top': Navmenu
     } },
     { path: '/redirect-me', redirect: { name: 'home' } },
     { path: '*', redirect: '/signin' }
