@@ -24,21 +24,17 @@
         if(this.input.username != "" && this.input.password != "") {
           this.$http.post('signin', this.input)
             .then(response => {
-              if (User.username)
+              if (response.username)
+              console.log(response)
               console.log('Success: ', response.date);
               this.$store.commit('changeUserId',{
-                userId: this.userid.id
+                userId: response.id
               })
-              this.$router.replace({ name: "secure" });
+              console.log(response)
+              this.$router.replace({ name: "home" });
             }, function(response){
             console.log('Error: ', response.data);
           });
-          // if(this.input.username == this.$parent.mockAccount.username && this.input.password == this.$parent.mockAccount.password) {
-          //   this.$emit("authenticated", true);
-          //   this.$router.replace({ name: "secure" });
-          // } else {
-          //   console.log("The username and / or password is incorrect");
-          // }
         } else {
           console.log("A username and password must be present");
         }

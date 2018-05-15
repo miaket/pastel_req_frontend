@@ -4,8 +4,11 @@ import Form from './components/Shared/Formbox.vue';
 // import UserEdit from './components/user/UserEdit.vue';
 import Home from './components/Home.vue';
 import Header from './components/Shared/Header.vue';
-
+import Signin from './components/auth/Signin.vue';
 export const routes = [
+    {path: '/signin', name: 'signin', components:{
+      default: Signin,
+    }},
     { path: '', name: 'home', components: {
         default: Home,
         'header-top': Header
