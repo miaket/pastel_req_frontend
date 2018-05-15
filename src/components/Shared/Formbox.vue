@@ -1,5 +1,6 @@
 <template>
   <form>
+    <h2>Demandas</h2>
     <div class="row">
       <app-anlform></app-anlform>
     </div>
@@ -23,7 +24,9 @@
         <button @click.prevent='submitted'
           class="btn btn-primary">Submit!
         </button>
-        <button @click.prevent="changeUserId" class="btn"></button>
+        <button @click.prevent="changeUserId" 
+          class="btn btn-primary">Change Id
+        </button>
       </div>
     </div>
   </form>
@@ -56,10 +59,10 @@
         });
       },
       changeUserId () {
-        console.log(this.$store.state.userId)
         this.$store.commit('changeUserId',{
           userId: this.userid.id
         })
+        console.log(this.$store.state.userId)
       },
     }
   }

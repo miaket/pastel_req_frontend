@@ -26,6 +26,9 @@
             .then(response => {
               if (User.username)
               console.log('Success: ', response.date);
+              this.$store.commit('changeUserId',{
+                userId: this.userid.id
+              })
               this.$router.replace({ name: "secure" });
             }, function(response){
             console.log('Error: ', response.data);

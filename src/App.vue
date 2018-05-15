@@ -1,30 +1,12 @@
 <template>
   <div class="container">
-    <app-header></app-header>
-    <app-formbox></app-formbox>
-    <hr>
-    <div class="row">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4>Your Data</h4>
+      <!-- <div class="row"> -->
+          <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+              <router-view name="header-top"></router-view>
+              <router-view></router-view>
+              <router-view name="header-bottom"></router-view>
           </div>
-          <div class="panel-body">
-            <p>Mail:</p>
-            <p>Password:</p>
-            <p>Age:</p>
-            <p>Message: </p>
-            <p><strong>Send Mail?</strong></p>
-            <ul>
-              <li></li>
-            </ul>
-            <p>Gender:</p>
-            <p>Priority:</p>
-            <p>Switched:</p>
-          </div>
-        </div>
-      </div>
-    </div>
+      <!-- </div> -->
   </div>
 </template>
 
