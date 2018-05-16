@@ -24,7 +24,7 @@
         <button @click.prevent='submitted'
           class="btn btn-primary">Submit!
         </button>
-        <button @click.prevent="changeUserId" 
+        <button @click.prevent="changeUserid" 
           class="btn btn-primary">Change Id
         </button>
       </div>
@@ -58,8 +58,8 @@
           console.log('Error: ', response.data);
         });
       },
-      changeUserId () {
-        this.$store.commit('changeUserId',{
+      changeUserid () {
+        this.$store.commit('changeUserid',{
           userid: this.userid.id
         })
         console.log(this.$store.state.userid)
