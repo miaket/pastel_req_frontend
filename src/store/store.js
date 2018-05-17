@@ -8,6 +8,11 @@ export const store = new Vuex.Store({
     userid: 0,
     username: '',
   },
+  getters: {
+    getUsername: state => {
+      return state.username
+    }
+  },
   mutations: {
     changeUserid(state, payload){
       state.userid = payload.userid
