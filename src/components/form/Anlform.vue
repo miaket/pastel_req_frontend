@@ -1,8 +1,6 @@
 <template>
   <form>
-    <div class="col-md-8 order-md-1">
-    </div>
-    <div class="row">
+    <div class="">
         <label for="message">Message</label><br>
         <!-- Interpolation between <textarea>{{ test }}</textarea> doesn't work!-->
         <textarea
@@ -10,7 +8,7 @@
           rows="5"
           class="form-control"></textarea>
     </div>
-    <div class="row">
+    <div class="">
       <div class="">
         <div class="form-group">
         <label for="sendmail">
@@ -29,7 +27,7 @@
 
       </div>
     </div>
-    <div class="row">
+    <div class="">
       <div class="">
         <label for="male">
         <input
@@ -45,7 +43,7 @@
         </label>
       </div>
     </div>
-    <div class="row">
+    <div class="">
       <div class="">
         <label for="priority">Priority</label>
         <select
