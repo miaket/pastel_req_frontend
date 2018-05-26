@@ -9,11 +9,11 @@
         <label for="message">User Id</label><br>
         <textarea v-model="userid.id" name="userid" id="" class="form-control" rows="1"></textarea>
         <label for="message">Describe Request</label><br>
-        <textarea v-model="userrequest.content"
+        <textarea v-model="reqinfo.content"
           id="reqmsg"
           rows="5"
           class="form-control"></textarea>
-          <p>{{userrequest.content}}</p>
+          <p>{{reqinfo.content}}</p>
       </div>
     <div class="">
       <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
@@ -36,8 +36,9 @@
         userid:{
           id:''
         },
-        userrequest: {
-          content: ''
+        reqinfo: {
+          message: '',
+          urgencyLevel: ''
         }
       }
     },
@@ -47,7 +48,7 @@
     methods: {
       submitted() {
         console.log ('under user: ' + this.$store.state.userid);
-        this.$http.post('user/' + this.$store.state.userid + '/reqcreate', this.userrequest)
+        this.$http.post('user/' + this.$store.state.userid + '/reqcreate', this.reqinfo)
           .then(response => {
             console.log('Success: ', response.date);
           }, function(response){
