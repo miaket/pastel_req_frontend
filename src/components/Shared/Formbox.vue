@@ -1,31 +1,48 @@
 <template>
-  <form>
+<div>
     <h2>Demandas</h2>
       <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
         <app-anlform></app-anlform>
       </div>
     <hr>
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
-        <label for="message">Urgency</label><br>
+        <!-- <label for="message">Urgency
         <textarea v-model="reqinfo.urgencyLevel" name="userid" id="" class="form-control" rows="1"></textarea>
-        <label for="message">Describe Request</label><br>
+          </label> -->
+  <form>
+        <div class="col-sm-2 col-lg-1">
+          <div class="">
+            <label for="urgency"> Urgency </label>
+            <select
+              v-model="reqinfo.urgencyLevel"
+              id="priority"
+              class="form-control">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+
+      <div class  ="col-xs-12 col-sm-8 col-md-12">
+        <label for="message">Describe Request
+        </label>
         <textarea v-model="reqinfo.message"
           id="reqmsg"
           rows="5"
           class="form-control"></textarea>
           <p>{{reqinfo.message}}</p>
       </div>
-    <div class="">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-        <button @click.prevent='submitted'
-          class="btn btn-primary">Submit!
-        </button>
-        <button @click.prevent="changeUserid" 
-          class="btn btn-primary">Change Id
-        </button>
+      <div class="">
+        <div class="col-md-4 col-md-offset-1">
+          <button @click.prevent='submitted'
+            class="btn btn-primary">Submit!
+          </button>
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -38,7 +55,7 @@
         },
         reqinfo: {
           message: '',
-          urgencyLevel: ''
+          urgencyLevel: '3'
         }
       }
     },
