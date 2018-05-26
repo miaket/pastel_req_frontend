@@ -35,12 +35,14 @@
           this.$http.post('signin', this.input)
             .then(response => {
               if (response.username)
-              console.log('Success: ', response.date);
               this.$store.commit('changeUserid',{
                 userid: response.id
               })
               this.$store.commit('changeUsername',{
                 username: response.body.username
+              })
+              this.$store.commit('changeUserid',{
+                userid: response.body.id
               })
               this.$router.replace({ name: "home" });
             }, function(response){

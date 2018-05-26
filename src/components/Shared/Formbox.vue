@@ -5,12 +5,9 @@
         <app-anlform></app-anlform>
       </div>
     <hr>
-    <div class="">
-      <div class="">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
         <label for="message">User Id</label><br>
         <textarea v-model="userid.id" name="userid" id="" class="form-control" rows="1"></textarea>
-      </div>
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 form-group">
         <label for="message">Describe Request</label><br>
         <textarea v-model="userrequest.content"
           id="reqmsg"
@@ -18,7 +15,6 @@
           class="form-control"></textarea>
           <p>{{userrequest.content}}</p>
       </div>
-    </div>
     <div class="">
       <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
         <button @click.prevent='submitted'
