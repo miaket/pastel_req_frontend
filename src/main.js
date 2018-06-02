@@ -6,8 +6,6 @@ import VueRouter from 'vue-router';
 import { routes } from './routes';
 import { store } from './store/store';
 import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
-import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 Vue.use(Vuetify)
 Vue.use(VueRouter);
