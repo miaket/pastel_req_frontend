@@ -1,12 +1,12 @@
 <template>
   <form>
     <div class="">
-        <label for="message">Message</label><br>
+      <label for="message">Message</label><br>
         <!-- Interpolation between <textarea>{{ test }}</textarea> doesn't work!-->
-        <textarea
-          id="message"
-          rows="5"
-          class="form-control"></textarea>
+      <textarea
+        id="message"
+        rows="5"
+        class="form-control"></textarea>
     </div>
     <div class="">
       <div class="">
@@ -53,7 +53,7 @@
         </select>
       </div>
     </div>
-    </form>
+  </form>
 </template>
 
 <script>
