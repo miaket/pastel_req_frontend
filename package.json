@@ -12,6 +12,7 @@
     "vue": "^2.0.1",
     "vue-resource": "^1.5.0",
     "vue-router": "^3.0.1",
+    "vuetify": "^1.0.18",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -23,6 +24,6 @@
     "file-loader": "^0.9.0",
     "vue-loader": "^9.7.0",
     "webpack": "2.1.0-beta.25",
-    "webpack-dev-server": "2.1.0-beta.0"
+    "webpack-dev-server": "^3.1.4"
   }
 }
