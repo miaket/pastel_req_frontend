@@ -1,5 +1,5 @@
 <template>
-  <div class="container py-5">
+  <div class="py-5 my-5">
     <img src="../../assets/cielologo.png" id="logo" alt ="Logo">
     <div class="col-xs-12 form-group">
       <h1>Informações estratégicas</h1>
