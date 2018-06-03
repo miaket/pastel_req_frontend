@@ -26,6 +26,6 @@
 
 <style scoped>
   #logo{
-     width: 30%
+    height: 60px
   }
 </style>
