@@ -6,6 +6,7 @@ import Home from './components/Home.vue';
 import Header from './components/Shared/Header.vue';
 import Signin from './components/auth/Signin.vue';
 import Navmenu from './components/Shared/Navmenu.vue';
+import Myreq from './components/view/Myreq.vue';
 
 export const routes = [
     {path: '/signin', name: 'signin', components:{
@@ -19,6 +20,11 @@ export const routes = [
     } },
     { path: '/form', components: {
         default: Form,
+        'header-top': Header,
+        'menu-top': Navmenu
+    } },
+    { path: '/myrequests', components: {
+        default: Myreq,
         'header-top': Header,
         'menu-top': Navmenu
     } },
