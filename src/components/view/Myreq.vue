@@ -1,18 +1,14 @@
 <template>
   <form>
-    <div class="row">
+    <!-- <div class="row">
       <button class="btn btn-lg btn-primary btn-block" type="button" v-on:click="getRequests()">trigger requests</button>
-    </div>
+    </div> -->
     <ul>
       <li v-for="request in userRequests.body" :key="request.index">
-        {{ request.createdAt}} - {{ request.requestId }} - {{ request.urgencyLevel }} 
-        {{ request.customers}}
-
+        {{ request.createdAt}} - {{ request.Id }} - {{ request.urgencyLevel }}
+        {{ request.customers }}
       </li>
     </ul>
-    <div>
-
-    </div>
   </form>
 </template>
 
@@ -30,7 +26,7 @@
     computed: {},
     methods: {},
     mounted(){
-      this.$http.get('user/myrequests')
+      this.$http.get('req/myrequests/' + this.$store.getters.getUserid)
         .then(response => {
           this.userRequests = response;
           console.log (this.userRequests)
