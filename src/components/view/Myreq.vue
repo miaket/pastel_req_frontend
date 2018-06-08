@@ -5,7 +5,7 @@
     </div> -->
     <ul>
       <li v-for="request in userRequests.body" :key="request.index">
-        {{ request.createdAt}} - {{ request.Id }} - {{ request.urgencyLevel }}
+        {{ request.createdAt}} - {{ request.message }} - {{ request.id }} - {{ request.urgencyLevel }}
         {{ request.customers }}
       </li>
     </ul>
