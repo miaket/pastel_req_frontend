@@ -3,7 +3,7 @@
   <div class="container">
       <ul class="nav nav-pills">
         <router-link class="navbar-brand" to="/home" tag="li" active-class="active" exact><a>Home</a></router-link>
-        <router-link class="navbar-brand" to="/form" tag="li" active-class="active"><a>User</a></router-link>
+        <router-link class="navbar-brand" to="/form" tag="li" active-class="active"><a>Open Request</a></router-link>
         <router-link class="navbar-brand" to="/myrequests" tag="li" active-class="active"><a>My Requests</a></router-link>
       </ul>
       <hr>
