@@ -53,6 +53,7 @@
           });
         } else {
           console.log("A username and password must be present");
+          this.loginErr = true;
         }
       }
     }
