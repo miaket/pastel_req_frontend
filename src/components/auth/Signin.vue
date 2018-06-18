@@ -11,6 +11,7 @@
           <input type="checkbox" value="remember-me"> Remember me
         </label>
       </div>
+      <div v-if="loginErr" id="error-msg">Erro no login</div>
       <button class="btn btn-lg btn-primary btn-block" type="button" v-on:click="signin()">Signin</button>
       <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
     </form>
@@ -26,7 +27,8 @@
         input: {
           username: "",
           password: ""
-        }
+        },
+        loginErr: false
       }
     },
     methods: {
@@ -47,6 +49,7 @@
               this.$router.replace({ name: "home" });
             }, function(response){
             console.log('Error: ', response.data);
+            this.loginErr = true;
           });
         } else {
           console.log("A username and password must be present");
@@ -64,6 +67,8 @@
     margin: auto;
     padding: 20px;
     font-size: 20;
-    
+  }
+  #error-msg {
+    color: red;
   }
 </style>
