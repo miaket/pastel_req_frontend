@@ -7,10 +7,10 @@
       <label for="two">Fraud</label>
     </div>
     <div class="">
-      <label for="message">EC number/CNPJ
+      <label for="message">EC number/CNPJ:
       <textarea
         id="message"
-        rows="5"
+        rows="1"
         class="form-control"></textarea>
         </label><br>
     </div>
