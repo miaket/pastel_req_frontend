@@ -4,13 +4,13 @@ import Form from './components/Shared/Formbox.vue';
 // import UserEdit from './components/user/UserEdit.vue';
 import Home from './components/Home.vue';
 import Header from './components/Shared/Header.vue';
-import Signin from './components/auth/Signin.vue';
+import Login from './components/auth/Login.vue';
 import Navmenu from './components/Shared/Navmenu.vue';
 import Myreq from './components/view/Myreq.vue';
 
 export const routes = [
-    {path: '/signin', name: 'signin', components:{
-      default: Signin,
+    {path: '/login', name: 'login', components:{
+      default: Login,
       'header-top': Header
     }},
     { path: '/home', name: 'home', components: {
@@ -29,5 +29,5 @@ export const routes = [
         'menu-top': Navmenu
     } },
     { path: '/redirect-me', redirect: { name: 'home' } },
-    { path: '*', redirect: '/signin' }
+    { path: '*', redirect: '/login' }
 ];

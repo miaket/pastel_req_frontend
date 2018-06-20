@@ -1,6 +1,6 @@
 <template>
   <div id="login">
-    <form class="form-signin">
+    <form class="form-login">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
       <label for="inputUsername" class="sr-only">Email address</label>
       <input type="text" name="username" class="form-control" v-model="input.username" placeholder="Username" />
@@ -12,7 +12,7 @@
         </label>
       </div>
       <div v-if="loginErr" id="error-msg">Erro no login</div>
-      <button class="btn btn-lg btn-primary btn-block" type="button" v-on:click="signin()">Signin</button>
+      <button class="btn btn-lg btn-primary btn-block" type="button" v-on:click="login()">Login</button>
       <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
     </form>
   </div>
@@ -21,7 +21,7 @@
 
 <script>
   export default {
-    name: 'Signin',
+    name: 'Login',
     data() {
       return {
         input: {
@@ -32,9 +32,9 @@
       }
     },
     methods: {
-      signin() {
+      login() {
         if(this.input.username != "" && this.input.password != "") {
-          this.$http.post('signin', this.input)
+          this.$http.post('login', this.input)
             .then(response => {
               console.log (response)
               if (response.ok){
