@@ -8,11 +8,20 @@ export const store = new Vuex.Store({
     user:{
       id: 0,
       name: '',
+    },
+    form:{
+      message: '',
+      urgencyLevel: 0,
+      complete: false,
+      regNumber: [11111, 11112, 11113]
     }
   },
   getters: {
     getUser: state => {
-      return state.user
+      return state.user;
+    },
+    getForm: state => {
+      return state.form;
     },
   },
   mutations: {
@@ -21,6 +30,10 @@ export const store = new Vuex.Store({
     },
     changeUsername(state, payload){
       state.user.name = payload.username
+    },
+    changeForm(state, payload){
+      for (let key in payload.form)
+          state.form[key] = payload.form[key];
     }
   }
 });
