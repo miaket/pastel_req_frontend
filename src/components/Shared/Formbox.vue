@@ -64,11 +64,10 @@
     },
     methods: {
       submitted() {
-        console.log ('posting: ' + 'user/' + this.$store.state.userid + '/reqcreate', this.reqinfo);
-        console.log(this.reqinfo)
-        this.$http.post('user/' + this.$store.state.userid + '/reqcreate', this.reqinfo)
+        console.log ('posting: ' + 'req/' + this.$store.state.userid + '/reqcreate' + ', body:' + this.$store.getters.getForm);
+        this.$http.post('req/' + this.$store.getters.getUser.id + '/reqcreate', this.$store.getters.getForm)
           .then(response => {
-            console.log('Success: ', response.date);
+            console.log('Success: ', response.data);
           }, function(response){
           console.log('Error: ', response.data);
         });
