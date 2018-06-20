@@ -18,7 +18,7 @@
     },
     computed: {
       getUsername () {
-        return this.$store.getters.getUsername
+        return this.$store.getters.getUser.name
       },
     }
   }

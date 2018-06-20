@@ -11,12 +11,9 @@ export const store = new Vuex.Store({
     }
   },
   getters: {
-    getUsername: state => {
-      return state.user.name
+    getUser: state => {
+      return state.user
     },
-    getUserid: state =>{
-      return state.user.id
-    }
   },
   mutations: {
     changeUserid(state, payload){
