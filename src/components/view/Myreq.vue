@@ -26,7 +26,7 @@
     computed: {},
     methods: {},
     mounted(){
-      this.$http.get('req/myrequests/' + this.$store.getters.getUserid)
+      this.$http.get('req/myrequests/' + this.$store.getters.getUser.id)
         .then(response => {
           this.userRequests = response;
           console.log (this.userRequests)
