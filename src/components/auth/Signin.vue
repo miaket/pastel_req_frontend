@@ -36,17 +36,16 @@
         if(this.input.username != "" && this.input.password != "") {
           this.$http.post('signin', this.input)
             .then(response => {
-              if (response.username)
-              this.$store.commit('changeUserid',{
-                userid: response.id
-              })
-              this.$store.commit('changeUsername',{
-                username: response.body.username
-              })
-              this.$store.commit('changeUserid',{
-                userid: response.body.id
-              })
-              this.$router.replace({ name: "home" });
+              console.log (response)
+              if (response.ok){
+                this.$store.commit('changeUsername',{
+                  username: response.body.username
+                })
+                this.$store.commit('changeUserid',{
+                  userid: response.body.id
+                })
+                this.$router.replace({ name: "home" });
+              }
             }, function(response){
             console.log('Error: ', response.data);
             this.loginErr = true;
