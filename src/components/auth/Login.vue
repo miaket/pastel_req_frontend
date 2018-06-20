@@ -42,7 +42,7 @@
                   username: response.body.username
                 })
                 this.$store.commit('changeUserid',{
-                  userid: response.body.id
+                  id: response.body.id
                 })
                 this.$router.replace({ name: "home" });
               }
