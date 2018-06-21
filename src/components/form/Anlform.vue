@@ -1,17 +1,18 @@
 <template>
   <form>
     <div>
-      <input type="radio" id="cb_radio" value="Chargeback" v-model="anlType">
-      <label for="one">Chargeback</label>
-      <input type="radio" id="fr_radio" value="Fraud" v-model="anlType">
-      <label for="two">Fraud</label>
+      <input type="radio" id="cb_radio" value="Chargeback" v-model="reqinfo.anlType">
+      <label for="cb">Chargeback</label>
+      <input type="radio" id="fr_radio" value="Fraud" v-model="reqinfo.anlType">
+      <label for="fr">Fraud</label>
     </div>
     <div class="">
       <label for="message">EC number/CNPJ:
       <textarea
         id="message"
         rows="1"
-        class="form-control"></textarea>
+        class="form-control"
+        v-model="reqinfo.regNumber"></textarea>
         </label><br>
     </div>
   </form>
@@ -21,7 +22,10 @@
   export default {
     data (){
       return{
-        anlType: 'Chargeback'
+        reqinfo:{
+          anlType: 'Chargeback',
+          regNumber: ''
+        }
       }
     },
     methods:{
