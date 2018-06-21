@@ -39,6 +39,10 @@
           <button @click.prevent='submitted'
             class="btn btn-primary">Submit!
           </button>
+          <button @click.prevent='storeForm'
+            class="btn">Store            
+          </button>
+          {{ reversedMessage }}
         </div>
       </div>
     </form>
@@ -64,7 +68,7 @@
     },
     methods: {
       submitted() {
-        console.log ('posting: ' + 'req/' + this.$store.state.userid + '/reqcreate' + ', body:' + this.$store.getters.getForm);
+        console.log ('posting: ' + 'req/' + this.$store.getters.getUser.id + '/reqcreate' + ', body:' + this.$store.getters.getForm);
         this.$http.post('req/' + this.$store.getters.getUser.id + '/reqcreate', this.$store.getters.getForm)
           .then(response => {
             console.log('Success: ', response.data);
@@ -72,12 +76,27 @@
           console.log('Error: ', response.data);
         });
       },
+      storeForm(){
+        this.$store.commit('changeForm',{
+          form: this.reqinfo
+        })
+      },
       changeUserid () {
         this.$store.commit('changeUserid',{
           userid: this.userid.id
         })
         console.log(this.$store.state.userid)
       },
+    },
+    computed: {
+    // a computed getter
+      reversedMessage: function () {
+        // `this` points to the vm instance
+        console.log('this is computed')
+        console.log(this.reqinfo)
+        this.storeForm()
+        return this.reqinfo.message.split('').reverse().join('')
+      }
     }
   }
 </script>
