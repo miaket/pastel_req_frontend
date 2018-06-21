@@ -24,6 +24,14 @@
         anlType: 'Chargeback'
       }
     },
+    methods:{
+      storeForm(){
+        this.$store.commit('changeForm',{
+          form: this.reqinfo
+        })
+      },
+    },
+
   }
 </script>
 
