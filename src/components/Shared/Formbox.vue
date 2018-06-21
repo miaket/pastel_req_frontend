@@ -32,7 +32,6 @@
           id="reqmsg"
           rows="5"
           class="form-control"></textarea>
-          <p>{{reqinfo.message}}</p>
       </div>
       <div class="">
         <div class="col-md-4 col-md-offset-1">
@@ -42,7 +41,6 @@
           <button @click.prevent='storeForm'
             class="btn">Store            
           </button>
-          {{ reversedMessage }}
         </div>
       </div>
     </form>
@@ -89,7 +87,6 @@
       },
     },
     computed: {
-    // a computed getter
       reversedMessage: function () {
         // `this` points to the vm instance
         console.log('this is computed')

@@ -13,7 +13,7 @@
         rows="1"
         class="form-control"
         v-model="reqinfo.regNumber"></textarea>
-        </label><br>
+        </label>
     </div>
   </form>
 </template>
@@ -34,8 +34,7 @@
           form: this.reqinfo
         })
       },
-    },
-
+    }
   }
 </script>
 
