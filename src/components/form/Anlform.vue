@@ -29,9 +29,9 @@
       }
     },
     methods:{
-      storeForm(val){
+      storeForm(dataObj){
         this.$store.commit('changeForm',{
-          form: this.anlinfo
+          form: dataObj
         })
       },
     },
