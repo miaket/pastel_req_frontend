@@ -35,11 +35,6 @@
         })
       },
     },
-    computed:{
-      // anlinfoo(){
-      //   return this.anlinfo
-      // }
-    },
     watch: {
       'anlinfo.regNumber': function (val) {
         this.storeForm(this.anlinfo)
