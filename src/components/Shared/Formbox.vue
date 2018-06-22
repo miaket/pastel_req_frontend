@@ -74,9 +74,9 @@
           console.log('Error: ', response.data);
         });
       },
-      storeForm(){
+      storeForm(dataObj){
         this.$store.commit('changeForm',{
-          form: this.reqinfo
+          form: dataObj
         })
       },
       changeUserid () {
@@ -88,10 +88,17 @@
     },
     computed: {
       updateFormStore: function () {
-        console.log(this.reqinfo)
-        this.storeForm()
+        this.storeForm(this.reqinfo)
       }
-    }
+    },
+    watch: {
+      'reqinfo.message': function () {
+        this.storeForm(this.reqinfo);
+      },
+      'reqinfo.urgencyLevel': function () {
+        this.storeForm(this.reqinfo);
+      }
+    },
   }
 </script>
 
