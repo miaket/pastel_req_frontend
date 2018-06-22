@@ -1,9 +1,9 @@
 <template>
   <form>
     <div>
-      <input type="radio" id="cb_radio" value="Chargeback" v-model="reqinfo.anlType">
+      <input type="radio" id="cb_radio" value="Chargeback" v-model="anlinfo.anlType">
       <label for="cb">Chargeback</label>
-      <input type="radio" id="fr_radio" value="Fraud" v-model="reqinfo.anlType">
+      <input type="radio" id="fr_radio" value="Fraud" v-model="anlinfo.anlType">
       <label for="fr">Fraud</label>
     </div>
     <div class="">
@@ -12,7 +12,7 @@
         id="message"
         rows="1"
         class="form-control"
-        v-model="reqinfo.regNumber"></textarea>
+        v-model="anlinfo.regNumber"></textarea>
         </label>
     </div>
   </form>
@@ -22,19 +22,29 @@
   export default {
     data (){
       return{
-        reqinfo:{
+        anlinfo:{
           anlType: 'Chargeback',
           regNumber: ''
         }
       }
     },
     methods:{
-      storeForm(){
+      storeForm(val){
         this.$store.commit('changeForm',{
-          form: this.reqinfo
+          form: this.anlinfo
         })
       },
-    }
+    },
+    computed:{
+      // anlinfoo(){
+      //   return this.anlinfo
+      // }
+    },
+    watch: {
+      'anlinfo.regNumber': function (val) {
+        this.storeForm(this.anlinfo)
+      }
+    },
   }
 </script>
 
