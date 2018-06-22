@@ -86,11 +86,6 @@
         console.log(this.$store.state.userid)
       },
     },
-    computed: {
-      updateFormStore: function () {
-        this.storeForm(this.reqinfo)
-      }
-    },
     watch: {
       'reqinfo.message': function () {
         this.storeForm(this.reqinfo);
