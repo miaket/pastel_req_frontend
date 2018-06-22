@@ -87,12 +87,9 @@
       },
     },
     computed: {
-      reversedMessage: function () {
-        // `this` points to the vm instance
-        console.log('this is computed')
+      updateFormStore: function () {
         console.log(this.reqinfo)
         this.storeForm()
-        return this.reqinfo.message.split('').reverse().join('')
       }
     }
   }
