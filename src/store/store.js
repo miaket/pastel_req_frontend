@@ -11,9 +11,9 @@ export const store = new Vuex.Store({
     },
     form:{
       message: '',
-      urgencyLevel: 0,
+      urgencyLevel: 3,
       complete: false,
-      regNumber: [11111, 11112, 11113]
+      regNumber: []
     }
   },
   getters: {
