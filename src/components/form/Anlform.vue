@@ -36,8 +36,11 @@
       },
     },
     watch: {
-      'anlinfo.regNumber': function (val) {
-        this.storeForm(this.anlinfo)
+      'anlinfo.anlType': function () {
+        this.storeForm(this.anlinfo);
+      },
+      'anlinfo.regNumber': function () {
+        this.storeForm(this.anlinfo);
       }
     },
   }
