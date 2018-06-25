@@ -24,18 +24,6 @@
 </template>
 
 <script>
-  export default {
-    data (){
-      return{
-        user:{
-          userName: this.$store.state.userName
-        },
-        flexUser:{
-          userName: ""
-        }
-      }
-    },
-  }
 </script>
 
 <style scoped>
