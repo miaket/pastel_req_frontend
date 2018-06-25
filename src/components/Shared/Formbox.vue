@@ -75,7 +75,7 @@
         });
       },
       storeForm(dataObj){
-        this.$store.dispach('changeForm',{
+        this.$store.dispatch('changeForm',{
           form: dataObj
         })
       },
