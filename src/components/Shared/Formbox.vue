@@ -75,7 +75,7 @@
         });
       },
       storeForm(dataObj){
-        this.$store.commit('changeForm',{
+        this.$store.dispach('changeForm',{
           form: dataObj
         })
       },
