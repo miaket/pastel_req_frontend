@@ -32,8 +32,14 @@ export const store = new Vuex.Store({
       state.user.name = payload.username
     },
     changeForm(state, payload){
-      for (let key in payload.form)
-          state.form[key] = payload.form[key];
+      for (let key in payload.form){
+        state.form[key] = payload.form[key];
+      }
+    }
+  },
+  actions: {
+    changeForm (context, payload) {
+      context.commit('changeForm',payload)
     }
   }
 });
