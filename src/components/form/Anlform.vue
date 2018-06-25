@@ -30,7 +30,7 @@
     },
     methods:{
       storeForm(dataObj){
-        this.$store.commit('changeForm',{
+        this.$store.dispatch('changeForm',{
           form: dataObj
         })
       },
