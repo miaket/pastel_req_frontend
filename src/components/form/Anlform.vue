@@ -12,7 +12,7 @@
         id="message"
         rows="1"
         class="form-control"
-        v-model="reqinfo.regNumber"></textarea>
+        v-model="auxRegNumber"></textarea>
         </label>
     </div>
   </form>
@@ -22,9 +22,10 @@
   export default {
     data (){
       return{
+        auxRegNumber: '',
         reqinfo:{
           anlType: 'Chargeback',
-          regNumber: ''
+          regNumber: []
         }
       }
     },
@@ -39,7 +40,9 @@
       'reqinfo.anlType': function () {
         this.storeForm(this.reqinfo);
       },
-      'reqinfo.regNumber': function () {
+      auxRegNumber: function () {
+        let regNumberArray = this.auxRegNumber.split(',');
+        this.reqinfo.regNumber = regNumberArray
         this.storeForm(this.reqinfo);
       }
     },
